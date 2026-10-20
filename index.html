@@ -1,0 +1,520 @@
+﻿
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flagg - Premium Online Shopping</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm py-2">
+    <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2 fs-4" href="/">
+            <span class="badge bg-primary rounded-circle p-2"><i class="bi bi-flag-fill"></i></span>
+            <span class="tracking-tight text-white">Flagg<span class="text-primary">.</span></span>
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMain">
+            <!-- Search Bar -->
+            <form action="/products" method="get" class="d-flex mx-lg-4 my-2 my-lg-0 flex-grow-1" style="max-width: 520px;">
+                <div class="input-group">
+                    <input type="text" name="q" class="form-control bg-light border-0" placeholder="Search gadgets, apparel, books..." value="">
+                    <button class="btn btn-primary px-3" type="submit"><i class="bi bi-search"></i></button>
+                </div>
+            </form>
+
+            <!-- Nav Links -->
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+                <li class="nav-item">
+                    <a class="nav-link text-light px-2" href="/products">
+                        <i class="bi bi-grid me-1"></i> Catalog
+                    </a>
+                </li>
+
+                
+                    
+                    
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-outline-light btn-sm px-3 rounded-pill" href="/login">Sign In</a>
+                        </li>
+                        <li class="nav-item ms-lg-1">
+                            <a class="btn btn-primary btn-sm px-3 rounded-pill" href="/register">Register</a>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Hero Banner -->
+<header class="hero-gradient text-white py-5 shadow-inner">
+    <div class="container py-4">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+                <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold mb-3">
+                    <i class="bi bi-shield-check me-1"></i> 100% Genuine Products & Free Fast Delivery
+                </span>
+                <h1 class="display-4 fw-extrabold mb-3 tracking-tight">
+                    Smart Shopping Made Simple & Fast.
+                </h1>
+                <p class="lead text-light mb-4">
+                    Experience modern online shopping with curated collections, exclusive seasonal discounts, express delivery, and seamless checkout.
+                </p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="/products" class="btn btn-light btn-lg px-4 rounded-pill fw-bold text-primary shadow-sm">
+                        Explore Catalog <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                    <a href="/products?category=1" class="btn btn-outline-light btn-lg px-4 rounded-pill fw-semibold">
+                        View Tech Deals <i class="bi bi-lightning-charge ms-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-5 d-none d-lg-block text-center">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600" alt="Featured Gadget" class="img-fluid rounded-4 shadow-lg border border-4 border-white-50" style="max-height: 340px; object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Category Showcase -->
+<section class="py-5 bg-white border-bottom">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-end mb-4">
+            <div>
+                <h2 class="fw-bold mb-1">Shop by Category</h2>
+                <p class="text-muted small mb-0">Browse through our curated departments</p>
+            </div>
+            <a href="/products" class="text-primary fw-semibold text-decoration-none">View All <i class="bi bi-chevron-right"></i></a>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-6 col-md-3">
+                <a href="/products?category=1" class="text-decoration-none text-dark">
+                    <div class="card border-0 bg-light rounded-4 text-center p-4 hover-shadow transition">
+                        <i class="bi bi-laptop fs-1 text-primary mb-2"></i>
+                        <h6 class="fw-bold mb-0">Electronics</h6>
+                        <span class="text-muted small">Gadgets & Tech</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3">
+                <a href="/products?category=2" class="text-decoration-none text-dark">
+                    <div class="card border-0 bg-light rounded-4 text-center p-4 hover-shadow transition">
+                        <i class="bi bi-handbag fs-1 text-danger mb-2"></i>
+                        <h6 class="fw-bold mb-0">Fashion</h6>
+                        <span class="text-muted small">Apparel & Shoes</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3">
+                <a href="/products?category=3" class="text-decoration-none text-dark">
+                    <div class="card border-0 bg-light rounded-4 text-center p-4 hover-shadow transition">
+                        <i class="bi bi-house-door fs-1 text-success mb-2"></i>
+                        <h6 class="fw-bold mb-0">Home & Living</h6>
+                        <span class="text-muted small">Comfort & Decor</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3">
+                <a href="/products?category=4" class="text-decoration-none text-dark">
+                    <div class="card border-0 bg-light rounded-4 text-center p-4 hover-shadow transition">
+                        <i class="bi bi-book fs-1 text-warning mb-2"></i>
+                        <h6 class="fw-bold mb-0">Books & Study</h6>
+                        <span class="text-muted small">Engineering & Guides</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Deals with Tag File Demo -->
+<section class="py-5">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-end mb-4">
+            <div>
+                <h2 class="fw-bold mb-1">Featured Trending Products</h2>
+                <p class="text-muted small mb-0">Rendered via Reusable Tag Files (<code>&lt;tags:productCard /&gt;</code>)</p>
+            </div>
+            <a href="/products" class="btn btn-outline-primary rounded-pill btn-sm">Full Catalog</a>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-12 col-sm-6 col-lg-3">
+                
+
+
+
+
+
+
+
+
+
+
+<div class="card h-100 product-card shadow-sm border-0 position-relative">
+    
+        <span class="badge bg-danger position-absolute top-0 start-0 m-3 px-2 py-1 shadow-sm">
+            10.0% OFF
+        </span>
+    
+
+    <div class="product-img-wrapper overflow-hidden bg-light rounded-top">
+        <a href="/product-details?id=1">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500" 
+                 class="card-img-top product-img" alt="MacBook Air M2 13-inch" 
+                 style="height: 220px; object-fit: cover; transition: transform 0.3s ease;">
+        </a>
+    </div>
+
+    <div class="card-body d-flex flex-column p-3">
+        <div class="text-muted small text-uppercase mb-1 fw-bold tracking-wider">Apple</div>
+        <h5 class="card-title fs-6 fw-semibold mb-2" style="min-height: 40px;">
+            <a href="/product-details?id=1" class="text-decoration-none text-dark hover-primary">
+                MacBook Air M2 13-inch
+            </a>
+        </h5>
+
+        <div class="d-flex align-items-baseline gap-2 mb-3 mt-auto">
+            
+                
+                    <span class="fs-5 fw-bold text-primary">₹85410.0</span>
+                    <span class="text-muted text-decoration-line-through small">₹94900.0</span>
+                
+                
+            
+        </div>
+
+        <div class="d-flex gap-2">
+            
+                
+                    <form action="/cart" method="post" class="w-100">
+                        <input type="hidden" name="action" value="add">
+                        <input type="hidden" name="productId" value="1">
+                        <input type="hidden" name="quantity" value="1">
+                        <button type="submit" class="btn btn-outline-primary btn-sm w-100 rounded-pill">
+                            <i class="bi bi-cart-plus me-1"></i> Add to Cart
+                        </button>
+                    </form>
+                
+                
+            
+        </div>
+    </div>
+</div>
+
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                
+
+
+
+
+
+
+
+
+
+
+<div class="card h-100 product-card shadow-sm border-0 position-relative">
+    
+        <span class="badge bg-danger position-absolute top-0 start-0 m-3 px-2 py-1 shadow-sm">
+            15.0% OFF
+        </span>
+    
+
+    <div class="product-img-wrapper overflow-hidden bg-light rounded-top">
+        <a href="/product-details?id=2">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" 
+                 class="card-img-top product-img" alt="Sony WH-1000XM5 ANC Headphones" 
+                 style="height: 220px; object-fit: cover; transition: transform 0.3s ease;">
+        </a>
+    </div>
+
+    <div class="card-body d-flex flex-column p-3">
+        <div class="text-muted small text-uppercase mb-1 fw-bold tracking-wider">Sony</div>
+        <h5 class="card-title fs-6 fw-semibold mb-2" style="min-height: 40px;">
+            <a href="/product-details?id=2" class="text-decoration-none text-dark hover-primary">
+                Sony WH-1000XM5 ANC Headphones
+            </a>
+        </h5>
+
+        <div class="d-flex align-items-baseline gap-2 mb-3 mt-auto">
+            
+                
+                    <span class="fs-5 fw-bold text-primary">₹25491.5</span>
+                    <span class="text-muted text-decoration-line-through small">₹29990.0</span>
+                
+                
+            
+        </div>
+
+        <div class="d-flex gap-2">
+            
+                
+                    <form action="/cart" method="post" class="w-100">
+                        <input type="hidden" name="action" value="add">
+                        <input type="hidden" name="productId" value="2">
+                        <input type="hidden" name="quantity" value="1">
+                        <button type="submit" class="btn btn-outline-primary btn-sm w-100 rounded-pill">
+                            <i class="bi bi-cart-plus me-1"></i> Add to Cart
+                        </button>
+                    </form>
+                
+                
+            
+        </div>
+    </div>
+</div>
+
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                
+
+
+
+
+
+
+
+
+
+
+<div class="card h-100 product-card shadow-sm border-0 position-relative">
+    
+
+    <div class="product-img-wrapper overflow-hidden bg-light rounded-top">
+        <a href="/product-details?id=6">
+            <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=500" 
+                 class="card-img-top product-img" alt="Nike Air Jordan 1 Retro" 
+                 style="height: 220px; object-fit: cover; transition: transform 0.3s ease;">
+        </a>
+    </div>
+
+    <div class="card-body d-flex flex-column p-3">
+        <div class="text-muted small text-uppercase mb-1 fw-bold tracking-wider">Nike</div>
+        <h5 class="card-title fs-6 fw-semibold mb-2" style="min-height: 40px;">
+            <a href="/product-details?id=6" class="text-decoration-none text-dark hover-primary">
+                Nike Air Jordan 1 Retro
+            </a>
+        </h5>
+
+        <div class="d-flex align-items-baseline gap-2 mb-3 mt-auto">
+            
+                
+                
+                    <span class="fs-5 fw-bold text-primary">₹14995.0</span>
+                
+            
+        </div>
+
+        <div class="d-flex gap-2">
+            
+                
+                    <form action="/cart" method="post" class="w-100">
+                        <input type="hidden" name="action" value="add">
+                        <input type="hidden" name="productId" value="6">
+                        <input type="hidden" name="quantity" value="1">
+                        <button type="submit" class="btn btn-outline-primary btn-sm w-100 rounded-pill">
+                            <i class="bi bi-cart-plus me-1"></i> Add to Cart
+                        </button>
+                    </form>
+                
+                
+            
+        </div>
+    </div>
+</div>
+
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                
+
+
+
+
+
+
+
+
+
+
+<div class="card h-100 product-card shadow-sm border-0 position-relative">
+    
+        <span class="badge bg-danger position-absolute top-0 start-0 m-3 px-2 py-1 shadow-sm">
+            10.0% OFF
+        </span>
+    
+
+    <div class="product-img-wrapper overflow-hidden bg-light rounded-top">
+        <a href="/product-details?id=9">
+            <img src="https://images.unsplash.com/photo-1532012164546-f432f2e3777f?w=500" 
+                 class="card-img-top product-img" alt="Core Java: Advanced Features (Vol 2)" 
+                 style="height: 220px; object-fit: cover; transition: transform 0.3s ease;">
+        </a>
+    </div>
+
+    <div class="card-body d-flex flex-column p-3">
+        <div class="text-muted small text-uppercase mb-1 fw-bold tracking-wider">Cay Horstmann</div>
+        <h5 class="card-title fs-6 fw-semibold mb-2" style="min-height: 40px;">
+            <a href="/product-details?id=9" class="text-decoration-none text-dark hover-primary">
+                Core Java: Advanced Features (Vol 2)
+            </a>
+        </h5>
+
+        <div class="d-flex align-items-baseline gap-2 mb-3 mt-auto">
+            
+                
+                    <span class="fs-5 fw-bold text-primary">₹1079.1</span>
+                    <span class="text-muted text-decoration-line-through small">₹1199.0</span>
+                
+                
+            
+        </div>
+
+        <div class="d-flex gap-2">
+            
+                
+                    <form action="/cart" method="post" class="w-100">
+                        <input type="hidden" name="action" value="add">
+                        <input type="hidden" name="productId" value="9">
+                        <input type="hidden" name="quantity" value="1">
+                        <button type="submit" class="btn btn-outline-primary btn-sm w-100 rounded-pill">
+                            <i class="bi bi-cart-plus me-1"></i> Add to Cart
+                        </button>
+                    </form>
+                
+                
+            
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Trust & Value Banner -->
+<section class="py-5 bg-primary-subtle border-top border-bottom">
+    <div class="container">
+        <div class="row g-4 text-center">
+            <div class="col-6 col-md-3">
+                <i class="bi bi-truck fs-1 text-primary mb-2"></i>
+                <h6 class="fw-bold mb-1">Free Delivery</h6>
+                <p class="text-muted small mb-0">On all prepaid orders across India</p>
+            </div>
+            <div class="col-6 col-md-3">
+                <i class="bi bi-shield-check fs-1 text-success mb-2"></i>
+                <h6 class="fw-bold mb-1">Secure Payments</h6>
+                <p class="text-muted small mb-0">UPI, Cards & Net Banking enabled</p>
+            </div>
+            <div class="col-6 col-md-3">
+                <i class="bi bi-arrow-repeat fs-1 text-warning mb-2"></i>
+                <h6 class="fw-bold mb-1">Easy 7-Day Returns</h6>
+                <p class="text-muted small mb-0">Hassle-free exchange policy</p>
+            </div>
+            <div class="col-6 col-md-3">
+                <i class="bi bi-headset fs-1 text-danger mb-2"></i>
+                <h6 class="fw-bold mb-1">24/7 Support</h6>
+                <p class="text-muted small mb-0">Dedicated customer care assistance</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<footer class="bg-dark text-white pt-5 pb-4 mt-auto border-top border-secondary">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <h5 class="fw-bold text-white mb-3">Flagg<span class="text-primary">.</span></h5>
+                <p class="text-secondary small">
+                    Flagg is a premium modern e-commerce platform delivering curated electronics, designer apparel, home living, and reading collections with secure online checkout and express shipping.
+                </p>
+                <div class="d-flex gap-3 text-secondary fs-5">
+                    <a href="#" class="text-secondary hover-white"><i class="bi bi-github"></i></a>
+                    <a href="#" class="text-secondary hover-white"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-secondary hover-white"><i class="bi bi-twitter-x"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+                <h6 class="text-uppercase fw-bold text-light mb-3 fs-7">Catalog</h6>
+                <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
+                    <li><a href="/products?category=1" class="text-secondary text-decoration-none">Electronics</a></li>
+                    <li><a href="/products?category=2" class="text-secondary text-decoration-none">Fashion Wear</a></li>
+                    <li><a href="/products?category=3" class="text-secondary text-decoration-none">Home & Living</a></li>
+                    <li><a href="/products?category=4" class="text-secondary text-decoration-none">Books & Textbooks</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h6 class="text-uppercase fw-bold text-light mb-3 fs-7">Customer Care</h6>
+                <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
+                    <li><a href="/orders" class="text-secondary text-decoration-none">Track Order</a></li>
+                    <li><a href="/profile" class="text-secondary text-decoration-none">Account Settings</a></li>
+                    <li><a href="/wishlist" class="text-secondary text-decoration-none">My Wishlist</a></li>
+                    <li><a href="/cart" class="text-secondary text-decoration-none">View Cart</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h6 class="text-uppercase fw-bold text-light mb-3 fs-7">Enterprise & Management</h6>
+                <p class="text-secondary small mb-2">
+                    Flagg is built on enterprise-grade layered architecture with multi-tier service and database layers.
+                </p>
+                <div class="mt-2">
+                    <a href="/admin/dashboard" class="btn btn-outline-light btn-sm rounded-pill px-3">
+                        <i class="bi bi-shield-lock me-1"></i> Staff Admin Portal
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-secondary my-4">
+
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-secondary">
+            <div>&copy; 2026 Flagg E-Commerce Platform. All rights reserved.</div>
+            <div class="d-flex gap-3 mt-2 mt-md-0">
+                <span class="badge bg-success-subtle text-success border border-success-subtle">MVC N-Tier</span>
+                <span class="badge bg-info-subtle text-info border border-info-subtle">JDBC & MySQL</span>
+                <span class="badge bg-warning-subtle text-warning border border-warning-subtle">High Performance</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/site-interactivity.js"></script></body>
+</html>
+
+
+
